@@ -1,0 +1,6 @@
+$law-vr-height: 1rem !default;
+
+@function vr($lines: 1, $base-height: $law-vr-height){
+  $line-height: $base-height * $lines;
+  @return $line-height;
+}

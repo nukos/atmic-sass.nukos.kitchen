@@ -1,0 +1,37 @@
+$law-shadow-x-ratio:    0.375 !default;
+$law-shadow-y-ratio:    0.375 !default;
+$law-shadow-blur-lower: 1 !default;
+$law-shadow-blur-ratio: 1 !default;
+$law-shadow-color:      #000000 !default;
+$law-shadow-alpha-init: 0.25 !default;
+$law-shadow-alpha-lower: 0.175 !default;
+$law-shadow-alpha-ratio: 0.005 !default;
+
+@function layer-shadow( $dp: 0, $x: 0px, $y: 1px, $blur: 1px ) {
+  $box-shadow: false;
+
+  $shadow-x: $x;
+  $shadow-y: $y;
+  $shadow-blur: $blur;
+
+  //shadow angle
+  $result-shadow-x: $shadow-x * if($law-shadow-x-ratio * abs($dp) > 1, ($law-shadow-x-ratio * $dp), $dp);
+  $result-shadow-y: $shadow-y * if($law-shadow-y-ratio * abs($dp) > 1, ($law-shadow-y-ratio * $dp), $dp);
+
+  //shadow color
+  $result-shadow-alpha: $law-shadow-alpha-init - ($dp * $law-shadow-alpha-ratio);
+  $result-shadow-color: rgba($law-shadow-color, if($result-shadow-alpha >= $law-shadow-alpha-lower, $result-shadow-alpha, $shadow-alpha-lower ));
+
+  //shadow blur
+  $result-shadow-blur-size: $shadow-blur * if($law-shadow-blur-ratio * abs($dp) > 1, $law-shadow-blur-ratio * abs($dp), 1);
+
+  @if $dp < 0 {
+    $box-shadow: inset (- floor($result-shadow-x)) (- floor($result-shadow-y)) floor($result-shadow-blur-size) $result-shadow-color;
+  } @else if $dp == 0 {
+    $box-shadow: none;
+  } @else if $dp > 0 {
+    $box-shadow: floor($result-shadow-x) floor($result-shadow-y) floor($result-shadow-blur-size) $result-shadow-color;
+  }
+
+  @return $box-shadow;
+}
