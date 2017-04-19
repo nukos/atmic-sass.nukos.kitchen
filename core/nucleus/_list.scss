@@ -1,0 +1,27 @@
+$n-ul-default-prefix: 'a-ul-default' !default;
+$n-ul-default-indent: 1.5em !default;
+
+@mixin nucleus-ul-default (
+  $prefix: $n-ul-default-prefix,
+  $indent: $n-ul-default-indent
+) {
+
+  li {
+    margin-left: $indent;
+    list-style: outside disc;
+  }
+}
+
+$n-ol-default-prefix: 'a-ol-default' !default;
+$n-ol-default-indent: 1.5em !default;
+
+@mixin nucleus-ol-default (
+  $prefix: $n-ol-default-prefix,
+  $indent: $n-ul-default-indent
+) {
+
+  li {
+    margin-left: $indent;
+    list-style: outside decimal;
+  }
+}

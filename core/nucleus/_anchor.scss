@@ -1,0 +1,312 @@
+$n-anchor-prefix: 'a-anchor' !default;
+$n-anchor-color: #000000 !default;
+
+@mixin nucleus-anchor (
+  $prefix: $n-anchor-prefix,
+  $color:  $n-anchor-color
+) {
+  text-decoration: none;
+  color          : $color;
+
+  @content;
+
+  &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}
+
+
+$n-anchor-block-inverse: false !default;
+$n-anchor-block-hover: true !default;
+$n-anchor-block-active: true !default;
+$n-anchor-block-visited: false !default;
+
+@mixin nucleus-anchor-block-theme($color, $bg-color,
+  $theme-name: 'default',
+  $inverse: $n-anchor-block-inverse,
+  $hover: $n-anchor-block-hover,
+  $active: $n-anchor-block-active,
+  $visited: $n-anchor-block-visited
+) {
+
+  @if $theme-name == 'default' {
+    @if $inverse {
+      color: $bg-color;
+      background-color: $color;
+    } @else {
+      color: $color;
+      background-color: $bg-color;
+    }
+
+    @if $visited {
+      &:visited {
+        text-decoration: none;
+
+        @if $inverse {
+          color: darken($bg-color, 8%);
+          background-color: $color;
+        } @else {
+          color: $color;
+          background-color: darken($bg-color, 16%);
+        }
+      }
+    }
+    @if $hover {
+      &:hover {
+        text-decoration: none;
+
+        @if $inverse {
+          color: $color;
+          background-color: $bg-color;
+        } @else {
+          color: darken($color, 8%);
+          background-color: lighten($bg-color, 8%);
+        }
+      }
+    }
+    @if $active {
+      &:active {
+        text-decoration: none;
+
+        color: $color;
+        background-color: darken($bg-color, 8%);
+      }
+    }
+  } @else {
+    &.t-#{$theme-name} {
+      @if $inverse {
+        color: $bg-color;
+        background-color: $color;
+      } @else {
+        color: $color;
+        background-color: $bg-color;
+      }
+
+      @if $visited {
+        &:visited {
+          text-decoration: none;
+
+          @if $inverse {
+            color: darken($bg-color, 8%);
+            background-color: $color;
+          } @else {
+            color: $color;
+            background-color: darken($bg-color, 16%);
+          }
+        }
+      }
+      @if $hover {
+        &:hover {
+          text-decoration: none;
+
+          @if $inverse {
+            color: $color;
+            background-color: $bg-color;
+          } @else {
+            color: $color;
+            background-color: lighten($bg-color, 8%);
+          }
+        }
+      }
+      @if $active {
+        &:active {
+          text-decoration: none;
+
+          color: $color;
+          background-color: darken($bg-color, 8%);
+        }
+      }
+    }
+  }
+}
+
+
+$n-anchor-block-shadow-hover: true !default;
+$n-anchor-block-shadow-active: true !default;
+$n-anchor-block-shadow-visited: false !default;
+
+@mixin nucleus-anchor-block-theme-shadow($color, $shadow-color,
+  $theme-name: 'default',
+  $hover: $n-anchor-block-shadow-hover,
+  $active: $n-anchor-block-shadow-active,
+  $visited: $n-anchor-block-shadow-visited
+) {
+
+  @if $theme-name == 'default' {
+    color: $color;
+    box-shadow: inset 0 0 0 $shadow-color;
+
+
+    @if $visited {
+      &:visited {
+        text-decoration: none;
+
+        color: darken($shadow-color, 16%);
+        box-shadow: inset 0 0 0 $shadow-color;
+      }
+    }
+    @if $hover {
+      &:hover {
+        text-decoration: none;
+
+        color: darken($color, 8%);
+        box-shadow: inset 0 vr(-.15) 0 $shadow-color;
+      }
+    }
+    @if $active {
+      &:active {
+        text-decoration: none;
+
+        color: $color;
+        box-shadow: inset 0 vr(-.25) 0 $shadow-color;
+      }
+    }
+  } @else {
+    &.t-#{$theme-name} {
+      color: $color;
+      box-shadow: inset 0 0 0 $shadow-color;
+
+      @if $visited {
+        &:visited {
+          text-decoration: none;
+
+          color: darken($shadow-color, 16%);
+          box-shadow: inset 0 0 0 $shadow-color;
+        }
+      }
+      @if $hover {
+        &:hover {
+          text-decoration: none;
+
+          color: darken($color, 8%);
+          box-shadow: inset 0 vr(-.15) 0 $shadow-color;
+        }
+      }
+      @if $active {
+        &:active {
+          text-decoration: none;
+
+          color: $color;
+          box-shadow: inset 0 vr(-.25) 0 $shadow-color;
+        }
+      }
+    }
+  }
+}
+
+
+@mixin nucleus-anchor-block-theme-shadow-left($color, $shadow-color,
+  $theme-name: 'default',
+  $hover: $n-anchor-block-shadow-hover,
+  $active: $n-anchor-block-shadow-active,
+  $visited: $n-anchor-block-shadow-visited
+) {
+
+  @if $theme-name == 'default' {
+    color: $color;
+    box-shadow: inset 0 0 0 $shadow-color;
+
+
+    @if $visited {
+      &:visited {
+        text-decoration: none;
+
+        color: darken($shadow-color, 16%);
+        box-shadow: inset 0 0 0 $shadow-color;
+      }
+    }
+    @if $hover {
+      &:hover {
+        text-decoration: none;
+
+        color: darken($color, 8%);
+        box-shadow: inset vr(.15) 0 0 $shadow-color;
+      }
+    }
+    @if $active {
+      &:active {
+        text-decoration: none;
+
+        color: $color;
+        box-shadow: inset vr(.25) 0 0 $shadow-color;
+      }
+    }
+  } @else {
+    &.t-#{$theme-name} {
+      color: $color;
+      box-shadow: inset 0 0 0 $shadow-color;
+
+      @if $visited {
+        &:visited {
+          text-decoration: none;
+
+          color: darken($shadow-color, 16%);
+          box-shadow: inset 0 0 0 $shadow-color;
+        }
+      }
+      @if $hover {
+        &:hover {
+          text-decoration: none;
+
+          color: darken($color, 8%);
+          box-shadow: inset vr(.15) 0 0 $shadow-color;
+        }
+      }
+      @if $active {
+        &:active {
+          text-decoration: none;
+
+          color: $color;
+          box-shadow: inset vr(.25) 0 0 $shadow-color;
+        }
+      }
+    }
+  }
+}
+
+
+$n-anchor-block-prefix: 'a-block-anchor' !default;
+$n-anchor-block-before-icon: false !default;
+$n-anchor-block-after-icon: false !default;
+
+@mixin nucleus-anchor-block (
+  $prefix:      $n-anchor-block-prefix,
+  $before-icon: $n-anchor-block-before-icon,
+  $after-icon:  $n-anchor-block-after-icon
+) {
+
+  display: block;
+
+  text-decoration: none;
+
+  @content;
+
+  &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+
+  @if ($before-icon) {
+    .#{$prefix}-before-icon {
+      margin-right: vr(.75);
+    }
+  }
+
+  @if ($after-icon) {
+    .#{$prefix}-after-icon {
+      float: right;
+      margin-left: vr(.75);
+    }
+  }
+}

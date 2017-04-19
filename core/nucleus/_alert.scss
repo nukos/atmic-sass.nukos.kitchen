@@ -1,0 +1,37 @@
+$n-alert-prefix:  'a-alert' !default;
+$n-alert-padding: vr(.75) vr() !default;
+$n-alert-border-radius: vr(.25) !default;
+
+@mixin nucleus-alert (
+  $prefix: $n-alert-prefix,
+  $padding: $n-alert-padding,
+  $border-radius: $n-alert-border-radius
+) {
+  padding: $padding;
+
+  color: darken($color-alert-default, 64%);
+
+  background: $color-alert-default;
+  border: 1px solid darken($color-alert-default, 6%);
+  border-radius: $border-radius;
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin nucleus-alert-theme($color, $theme-name: 'default') {
+  &.t-#{$theme-name} {
+    background: $color;
+    color: darken($color, 64%);
+    border: 1px solid darken($color, 4%);
+
+    strong {
+      color: darken($color, 80%);
+    }
+  }
+}

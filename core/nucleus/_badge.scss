@@ -1,0 +1,22 @@
+$n-badge-prefix: 'a-badge' !default;
+$n-badge-pad: 0 vr(.25) !default;
+$n-badge-font-size: modular-scale(-3) !default;
+$n-badge-background: rgba(0,0,0,.035) !default;
+
+@mixin nucleus-badge (
+  $prefix: $n-badge-prefix,
+  $pad: $n-badge-pad,
+  $font-size: $n-badge-font-size,
+  $background: $n-badge-background
+) {
+  display: inline-block;
+  padding: $pad;
+
+  font-size: $font-size;
+  letter-spacing: 0;
+  text-indent: 0;
+
+  background: $background;
+
+  @content;
+}

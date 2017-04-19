@@ -1,0 +1,140 @@
+$n-text-prefix: 'a-text' !default;
+$n-text-color: #000000 !default;
+
+@mixin nucleus-text (
+  $prefix: $n-text-prefix,
+  $color:  $n-text-color
+) {
+  text-decoration:   none;
+  color:           $color;
+
+  @include media($bp-mobile) {
+    font-size: modular-scale(-2);
+    line-height: vr(1);
+  }
+
+  @content;
+}
+
+
+$n-text-header-prefix: 'a-text-header' !default;
+
+@mixin nucleus-text-heading ( $level,
+  $prefix: $n-text-header-prefix
+) {
+  font-feature-settings : "palt";
+
+  @if $level == 1 {
+    @include media($bp-mobile) {
+      font-size: modular-scale(1);
+      line-height: vr(1.5);
+    }
+    @include media($bp-tablet) {
+      font-size: modular-scale(2);
+      line-height: vr(1.75);
+    }
+    @include media($bp-laptop) {
+      font-size: modular-scale(3);
+      line-height: vr(2);
+    }
+    @include media($bp-desktop) {
+      font-size: modular-scale(4);
+      line-height: vr(2.25);
+    }
+
+  } @else if $level == 2 {
+    @include media($bp-mobile) {
+      font-size: modular-scale(0);
+      line-height: vr(1.25);
+    }
+    @include media($bp-tablet) {
+      font-size: modular-scale(1);
+      line-height: vr(1.5);
+    }
+    @include media($bp-laptop) {
+      font-size: modular-scale(2);
+      line-height: vr(1.75);
+    }
+    @include media($bp-desktop) {
+      font-size: modular-scale(3);
+      line-height: vr(2);
+    }
+
+  } @else if $level == 3 {
+    @include media($bp-mobile) {
+      font-size: modular-scale(-1);
+      line-height: vr(1);
+    }
+    @include media($bp-tablet) {
+      font-size: modular-scale(0);
+      line-height: vr(1.25);
+    }
+    @include media($bp-laptop) {
+      font-size: modular-scale(1);
+      line-height: vr(1.5);
+    }
+    @include media($bp-desktop) {
+      font-size: modular-scale(2);
+      line-height: vr(1.75);
+    }
+
+  } @else if $level == 4 {
+    @include media($bp-mobile) {
+      font-size: modular-scale(-2);
+      line-height: vr(1);
+    }
+    @include media($bp-tablet) {
+      font-size: modular-scale(-1);
+      line-height: vr(1.25);
+    }
+    @include media($bp-laptop) {
+      font-size: modular-scale(0);
+      line-height: vr(1.5);
+    }
+    @include media($bp-desktop) {
+      font-size: modular-scale(1);
+      line-height: vr(1.75);
+    }
+
+  } @else if $level == 5 {
+    font-size: modular-scale(-1);
+    line-height: vr(1.25);
+
+  } @else if $level == 6 {
+    font-size: modular-scale(-2);
+    line-height: vr(1);
+  }
+
+  @content;
+}
+
+
+
+$n-text-catch-prefix: 'a-text-catch' !default;
+$n-text-catch-color: lighten($color-primary, 4%) !default;
+@mixin nucleus-text-catch (
+  $prefix: $n-text-catch-prefix,
+  $color:  $n-text-catch-color
+) {
+  color: $color;
+  font-weight: bold;
+
+  @content;
+}
+
+
+$n-text-label-prefix: 'a-text-label' !default;
+$n-text-label-color: #fff !default;
+$n-text-label-bg-color: rgba(0,0,0,.25) !default;
+@mixin nucleus-text-label (
+  $prefix: $n-text-label-prefix,
+  $color:  $n-text-label-color,
+  $bg-color: $n-text-label-bg-color
+) {
+  color: $color;
+  font-weight: bold;
+
+  background: $bg-color;
+
+  @content;
+}

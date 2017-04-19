@@ -1,11 +1,14 @@
 {
-  "name": "atomic-sass.nukos.kitchen",
-  "version": "0.0.1",
+  "name": "atomic-sass-nukos-kitchen",
+  "version": "0.0.2",
+  "description": "private styles",
+  "homepage": "http://whiskers.nukos.kitchen",
   "main": "index.js",
   "scripts": {
     "build-sass": "node-sass --output-style compressed style.scss style.css"
   },
   "author": "Ryuichi Nonaka",
+  "repository": "git@github.com:nukos/atmic-sass.nukos.kitchen.git",
   "license": "MIT",
   "devDependencies": {
     "bourbon": "^4.3.4",
