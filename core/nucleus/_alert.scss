@@ -2,6 +2,20 @@ $n-alert-prefix:  'a-alert' !default;
 $n-alert-padding: vr(.75) vr() !default;
 $n-alert-border-radius: vr(.25) !default;
 
+
+/**
+ * Put rounded borders around the element
+ * and a border color.
+ *
+ * @mixin nucleus-alert
+ * @param $prefix This could be single line ...
+ * @param $padding
+ *  Or multi-line, you decide!
+ * @param $border-radius Border Radius
+ * @example
+ *  @include nucleus-alert;
+ */
+
 @mixin nucleus-alert (
   $prefix: $n-alert-prefix,
   $padding: $n-alert-padding,

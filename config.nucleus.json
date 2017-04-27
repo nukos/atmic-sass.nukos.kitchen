@@ -1,0 +1,11 @@
+{
+  "title": "Atomic StyleGuide",
+  "files": ["core/**/*.scss"],
+  "target": "styleguide",
+  "css": "",
+  "namespace": "page",
+  "verbose": 3,
+  "counterCSS": null,
+  "staticLipsum": false,
+  "placeholderService": false
+}
