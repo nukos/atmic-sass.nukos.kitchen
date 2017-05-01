@@ -1,3 +1,9 @@
-@include "config"
+@include "config";
 
-@include "nucleus/alert"
+@include "nucleus/colors";
+@include "nucleus/palettes/default";
+@include "nucleus/palettes/japan";
+@include "nucleus/font-family";
+//@include "nucleus/alert";
+
+@include "mixins/state";

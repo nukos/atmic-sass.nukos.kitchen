@@ -1,6 +1,22 @@
 $mix-data-state-prefix: 'is' !default;
 $mix-data-state-attr: 'data' !default;
 
+/**
+ * State management using custom data attributes.
+ *
+ * @mixin Custom Data Attribute State.
+ * @section Style Mixins
+ *
+ * @param $name <String> State name
+ * @param $state [Boolean or String] State
+ * @param $attr [String] Custome data attr name
+ * @param $prefix [String] State prefix
+ *
+ * @example
+ *  @include data-state('active');
+ *  @include data-state('active', true);
+ */
+
 @mixin data-state($name, $state: true, $attr: $mix-data-state-attr, $prefix: $mix-data-state-prefix) {
   &[#{$attr}-#{$prefix}-#{$name}="#{$state}"] {
     @content;
