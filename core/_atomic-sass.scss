@@ -1,9 +1,10 @@
 @include "config";
-
-@include "nucleus/colors";
-@include "nucleus/palettes/default";
-@include "nucleus/palettes/japan";
-@include "nucleus/font-family";
+@include "config/colors";
+@include "config/palettes/default";
+@include "config/palettes/japan";
+@include "config/font-family";
 //@include "nucleus/alert";
 
 @include "mixins/state";
+
+@include "laws/layer-index";

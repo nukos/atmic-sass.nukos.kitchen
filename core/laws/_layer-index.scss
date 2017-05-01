@@ -3,15 +3,24 @@ $law-layer-index: (
   'header':    500,
   'nav':       400,
   'sidebar':   600,
-  'category':  100,
-  'selectbox': 100,
   'dropdown':  100,
-  'shortcut':  100,
   'overlay':    50,
   'base':     auto,
   'ahead':       0,
   'behind':     -1
 ) !default;
+
+/**
+ * Layer index management.
+ *
+ *
+ * @section Style Mixins
+ *
+ * @param $name <String> layer name
+ *
+ * @example
+ *  z-index: layer-index(overlay);
+ */
 
 @function layer-index( $name: 'base' ) {
   $z-index: 0;
