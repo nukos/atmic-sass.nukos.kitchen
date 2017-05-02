@@ -10,18 +10,6 @@ $law-layer-index: (
   'behind':     -1
 ) !default;
 
-/**
- * Layer index management.
- *
- *
- * @section Style Mixins
- *
- * @param $name <String> layer name
- *
- * @example
- *  z-index: layer-index(overlay);
- */
-
 @function layer-index( $name: 'base' ) {
   $z-index: 0;
 

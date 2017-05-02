@@ -7,18 +7,6 @@ $law-shadow-alpha-init: 0.25 !default;
 $law-shadow-alpha-lower: 0.175 !default;
 $law-shadow-alpha-ratio: 0.005 !default;
 
-/**
- * Layer Shadow management.
- *
- * @mixin Layer Shadow
- * @section Style Mixins
- *
- * @param $name <String> layer name
- *
- * @example
- *  @include layer-index(overlay);
- */
-
 @function layer-shadow( $dp: 0, $x: 0px, $y: 1px, $blur: 1px ) {
   $box-shadow: false;
 

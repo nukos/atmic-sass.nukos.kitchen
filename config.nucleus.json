@@ -1,11 +1,12 @@
 {
   "title": "Atomic StyleGuide",
   "files": ["core/**/*.scss"],
-  "target": "docs",
   "css": "",
+  "target": "docs",
   "namespace": "page",
   "verbose": 3,
   "counterCSS": null,
   "staticLipsum": false,
-  "placeholderService": false
+  "placeholderService": false,
+  "template": "./template"
 }
