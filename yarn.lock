@@ -872,9 +872,9 @@ normalize-package-data@^2.3.2, normalize-package-data@^2.3.4:
     gauge "~2.7.1"
     set-blocking "~2.0.0"
 
-nucleus-styleguide@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/nucleus-styleguide/-/nucleus-styleguide-1.1.0.tgz#16eee1fdd4018372a6286e4fe1821acd7d72fbff"
+nucleus-styleguide@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/nucleus-styleguide/-/nucleus-styleguide-1.1.1.tgz#41b0e298e36735083341d06b68036c339fd4eb65"
   dependencies:
     chalk "^1.1.3"
     color "^0.11.3"
@@ -1484,17 +1484,13 @@ with@^5.0.0:
     acorn "^3.1.0"
     acorn-globals "^3.0.0"
 
-wordwrap@0.0.2:
+wordwrap@0.0.2, wordwrap@~0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
 
 wordwrap@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
-
-wordwrap@~0.0.2:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
 
 wrap-ansi@^2.0.0:
   version "2.1.0"

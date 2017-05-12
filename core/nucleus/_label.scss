@@ -1,0 +1,51 @@
+$n-label-prefix:  'n-label' !default;
+$n-label-padding: 0 .625em !default;
+$n-label-border-radius: .625em !default;
+
+@mixin nucleus-label (
+  $prefix: $n-label-prefix,
+  $padding: $n-label-padding,
+  $border-radius: $n-label-border-radius
+) {
+  display: inline-block;
+  margin: 0 .25em;
+  padding: $padding;
+  border-radius: $border-radius;
+
+  text-align: center;
+  font-size: 0.75em;
+  font-weight: bold;
+  vertical-align: bottom;
+  letter-spacing: .075em;
+  text-indent: .075em;
+  word-break: break-all;
+
+  background: #fff;
+  color: darken($color-alert-default, 64%);
+  box-shadow: inset 1px 1px 0 darken($color-alert-default, 6%), inset -1px -1px 0 darken($color-alert-default, 6%);
+  border-radius: .125em;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin nucleus-label-theme($color, $bg-color, $theme-name: 'default') {
+  &.t-#{$theme-name} {
+    background: $bg-color;
+    color: $color;
+    box-shadow: inset 1px 1px 0 darken($bg-color, 6%), inset -1px -1px 0 darken($bg-color, 6%);
+  }
+}

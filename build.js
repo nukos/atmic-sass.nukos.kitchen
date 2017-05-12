@@ -2,7 +2,7 @@ var sass = require('node-sass');
 var fs   = require('fs');
 
 sass.render({
-  file: 'style.scss',
+  file: 'core/style.scss',
   outFile: 'style.css',
 }, function(error, result) { // node-style callback from v3.0.0 onwards
   if(!error){

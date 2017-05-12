@@ -13,8 +13,8 @@ $mix-data-state-attr: 'data' !default;
  * @param $prefix [String] State prefix
  *
  * @example
- *  @include data-state('active');
- *  @include data-state('active', true);
+ *  @include data-state('active') { ... }
+ *  @include data-state('active', true) { ... }
  */
 
 @mixin data-state($name, $state: true, $attr: $mix-data-state-attr, $prefix: $mix-data-state-prefix) {

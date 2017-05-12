@@ -1,5 +1,19 @@
 $mix-separate-border-style: 1px solid #eeeeee !default;
 
+/**
+ * Pseudo-elements border
+ *
+ * @mixin Pseudo-elements border.
+ * @section Style Mixins
+ *
+ * @param $position [String] position name (default: bottom)
+ * @param $border [String] border style
+ *
+ * @example
+ *  @include separate-border('bottom');
+ *  @include separate-border('bottom', 5px solid #000);
+ */
+
 @mixin separate-border($position: bottom, $border: $mix-separate-border-style) {
   position: relative;
 

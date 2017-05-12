@@ -4,14 +4,31 @@
  * @color PrimaryColor
  * @section Key Colors
  */
-$n-color-primary: #004488;
+$color-primary: #004488 !default;
 
 /**
  * The counter color.
  *
  * @color: CounterColor
+ * @section Key Colors
  */
-$n-color-secondary: #ee4400;
+$color-secondary: #ee4400 !default;
+
+/**
+ * The Anchor color.
+ *
+ * @color: AnchorColor
+ * @section Etc Colors
+ */
+$color-anchor: #004488 !default;
+
+/**
+ * The error color.
+ *
+ * @color: ErrorColor
+ * @section Etc Colors
+ */
+$color-error: #cc0000 !default;
 
 
 

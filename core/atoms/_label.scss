@@ -1,0 +1,24 @@
+/**
+ * @atom Label
+ * @section Label
+ * @modifiers
+ *  .t-success success
+ * @markup
+ *  <span class="a-label">label</span>
+ *  <span class="a-label t-success">label</span>
+ *  <span class="a-label t-info">label</span>
+ *  <span class="a-label t-warning">label</span>
+ *  <span class="a-label t-danger">label</span>
+ *  <span class="a-label t-disabled">label</span>
+ */
+%a-label {
+  @include nucleus-label;
+  @include nucleus-label-theme(darken($color-alert-success, 64%), $color-alert-success, 'success');
+  @include nucleus-label-theme(darken($color-alert-info, 64%), $color-alert-info, 'info');
+  @include nucleus-label-theme(darken($color-alert-warning, 64%), $color-alert-warning, 'warning');
+  @include nucleus-label-theme(darken($color-alert-danger, 64%), $color-alert-danger, 'danger');
+  @include nucleus-label-theme(#999, #f5f5f5, 'disabled');
+}
+.a-label {
+  @extend %a-label;
+}

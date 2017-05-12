@@ -5,7 +5,7 @@
   "homepage": "http://whiskers.nukos.kitchen",
   "main": "index.js",
   "scripts": {
-    "build-sass": "node-sass --output-style compressed style.scss style.css",
+    "build-sass": "node-sass --output-style compressed core/style.scss docs/style.css",
     "styleguide": "nucleus --config config.nucleus.json"
   },
   "author": "Ryuichi Nonaka",
@@ -15,7 +15,7 @@
     "bourbon": "^4.3.4",
     "bourbon-neat": "^2.0.0",
     "node-sass": "^4.5.2",
-    "nucleus-styleguide": "^1.1.0",
+    "nucleus-styleguide": "^1.1.1",
     "pug": "^2.0.0-beta.12"
   }
 }

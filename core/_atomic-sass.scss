@@ -1,10 +1,11 @@
-@include "config";
-@include "config/colors";
-@include "config/palettes/default";
-@include "config/palettes/japan";
-@include "config/font-family";
-//@include "nucleus/alert";
+@import "config";
+@import "config/colors";
+@import "config/palettes/default";
+@import "config/palettes/japan";
+@import "config/palettes/alert";
+@import "config/font-family";
 
-@include "mixins/state";
+@import "mixins/state";
 
-//@include "laws/layer-index";
+@import "nucleus/label";
+@import "atoms/label";
